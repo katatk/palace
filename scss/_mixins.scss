@@ -1,0 +1,42 @@
+// Mixins
+@mixin transition-all() {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+@mixin background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin montserrat-light() {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+@mixin montserrat-semi-bold() {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+@mixin roboto-light() {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+}
+
+@mixin roboto-medium() {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 500;
+}
+
+// darken hover links
+@mixin darken-hover($color) {
+    &:hover {
+        color: darken($color, 15%);
+    }
+}

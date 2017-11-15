@@ -1,0 +1,42 @@
+footer {
+    
+    font-size: 0.9rem;
+    
+    background-color: #2e3c44;
+    color: #fff;
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .address {
+        margin-top: 36px;
+    }
+    
+    .social {
+        color: $white;
+        @include darken-hover($white);
+    }
+
+    .container-fluid:first-child {
+        border-bottom: 1px solid #4b5b65;
+    }
+    .container-fluid:last-child {
+     font-size: 0.8125rem;  
+        a {
+            color: #fff;
+            @include darken-hover($white);
+        }
+    }
+    
+    ul {
+        padding-left: 0;
+    }
+    li {
+        list-style: none;
+    }
+    
+    .terms-links a {
+        margin: 0 1rem;
+    }
+}

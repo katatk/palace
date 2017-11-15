@@ -1,0 +1,10 @@
+// Styling for the navbar
+
+#mainNav {
+    color: $black;
+    background-color: transparent;
+
+    @media (min-width: 992px) {
+        background-color: $white;
+    }
+}
