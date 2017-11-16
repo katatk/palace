@@ -1,0 +1,144 @@
+.first-container {
+    background-color: $light-bg;
+}
+
+.welcome-to {
+    @include montserrat-reg;
+    color: $primary;
+    font-size: 1.5rem;
+    position: relative;
+    background: $light-bg;
+    z-index: 1;
+    display: inline-block;
+
+    span {
+        background: $light-bg;
+        padding: 0 15px;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        border-top: 2px solid $primary;
+        width: 140%;
+        top: 50%;
+        left: -20%;
+        z-index: -10;
+    }
+}
+
+.main-heading {
+    @include montserrat-semi-bold;
+}
+
+.plans-container {
+    @include dropshadow();
+    position: relative;
+
+    .info-pack-container {
+        position: absolute;
+        left: calc(50% - 118.164px);
+        top: calc(50% - 158.797px);
+        z-index: 2;
+        
+        img {
+           box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15); 
+        }
+
+        button {
+            margin-top: 1rem;
+            display: block;
+        }
+    }
+}
+
+.section {
+    padding: 8rem 0;
+}
+
+.dream-home {
+    background: url('../assets/dream-home.jpg') no-repeat center;
+    color: #fff;
+
+}
+
+.house-land-container {
+    background: $green;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+        background-image: url('../assets/house-land-packages.jpg');
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+}
+
+.design-build-container {
+    background: $primary;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.1;
+        background-image: url('../assets/design-build.jpg');
+        background-repeat: no-repeat;
+        background-position: cover;
+    }
+
+}
+
+
+.design-build-container,
+.house-land-container {
+    color: #fff;
+
+    a {
+        color: #fff;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid #fff;
+        }
+    }
+    @media (min-width: 992px) {
+        background-image: none;
+    }
+}
+
+// large devices
+@media (min-width: 992px) {
+    .inner {
+        max-width: 540px;
+        padding: 0 15px;
+    }
+    .design-build {
+        background: url('../assets/design-build.jpg') no-repeat;
+        background-size: cover;
+    }
+
+    .house-land {
+        background: url('../assets/house-land-packages.jpg') no-repeat;
+        background-size: cover;
+    }
+}

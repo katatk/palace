@@ -18,6 +18,12 @@
     text-transform: uppercase;
 }
 
+@mixin montserrat-reg() {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
 @mixin montserrat-semi-bold() {
     font-family: 'Montserrat', Arial, sans-serif;
     font-weight: 600;
@@ -34,9 +40,17 @@
     font-weight: 500;
 }
 
+@mixin yesteryear() {
+    font-family: 'Yesteryear', cursive;
+}
+
 // darken hover links
 @mixin darken-hover($color) {
     &:hover {
         color: darken($color, 15%);
     }
+}
+
+@mixin dropshadow() {
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.08);
 }

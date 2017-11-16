@@ -1,18 +1,19 @@
 // Global styling for this template
 body,
 html {
-  width: 100%;
-  height: 100%;
- @include roboto-light;
+    width: 100%;
+    height: 100%;
+    @include roboto-light;
+    color: $text;
 }
 
 a {
-  color: $green;
-  @include transition-all;
-  &:hover {
-   @include darken-hover($green);
-    text-decoration: none;
-  }
+    color: $green;
+    @include transition-all;
+    &:hover {
+        @include darken-hover($green);
+        text-decoration: none;
+    }
 }
 
 h2,
@@ -20,49 +21,38 @@ h3,
 h4,
 h5,
 h6 {
-  @include montserrat-light;
+    @include montserrat-light;
 }
 
 .bg-primary {
-  background-color: $primary;
-}
-
-.bg-dark {
-  background-color: $dark;
-}
-
-section {
-  padding: 8rem 0;
+    background-color: $primary;
 }
 
 .btn {
-    border-radius: 25%;
+    /* pill style buttons */
+    border-radius: 999px;
+    color: #fff;
+    background: -webkit-gradient(linear, left top, right top, from($primary), to($green));
+    background: linear-gradient(to right, $primary, $green);
+    cursor: pointer;
+    text-transform: uppercase;
+    @include montserrat-light;
+    padding: 0.75em 1.5em;
+    border: 0;
+    font-size: 0.9rem;
+
+    &:focus,
+    &:active,
+    &:hover {
+        box-shadow: none;
+        background: -webkit-gradient(linear, left top, right top, from($primary), to($green));
+        background: linear-gradient(to right, $primary, $green);
+        background-image: linear-gradient(to right, $primary, $green);
+        color: #fff;
+    }
 }
 
-/*
-::-moz-selection {
-  color: $white;
-  background: $gray-900;
-  text-shadow: none;
+.btn:not([disabled]):not(.disabled).active,
+.btn:not([disabled]):not(.disabled):active {
+    background-image: linear-gradient(to right, $primary, $green);
 }
-
-::selection {
-  color: $white;
-  background: $gray-900;
-  text-shadow: none;
-}
-
-img::selection {
-  color: $white;
-  background: transparent;
-}
-
-img::-moz-selection {
-  color: $white;
-  background: transparent;
-}
-
-body {
-  -webkit-tap-highlight-color: $gray-900;
-}
-*/

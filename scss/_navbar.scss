@@ -1,10 +1,49 @@
 // Styling for the navbar
-
 #mainNav {
-    color: $black;
+    color: #000;
     background-color: transparent;
 
     @media (min-width: 992px) {
-        background-color: $white;
+        background-color: #fff;
+       @include dropshadow();
     }
+
+    .active .nav-link {
+        color: $primary;
+        border-bottom: 2px solid $primary;
+    }
+
+    .nav-link {
+        color: $text;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        @include roboto-medium;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .btn .nav-link {
+        color: #fff;
+        @include montserrat-light;
+        padding: 0;
+    }
+
+    .logo-container {
+        position: relative;
+        top: -50px;
+    }
+
+    .shrink {
+        position: static;
+
+        img {
+            max-height: 50px;
+            width: auto;
+
+        }
+    }
+
+
 }
