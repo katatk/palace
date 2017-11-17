@@ -74,16 +74,14 @@ function stickIt() {
 
             // updated left and width of cloned
             $('.cloned').css('left', leftOrgElement + 'px').css('top', 0).css('width', widthOrgElement).show();
-            $('.original').css('visibility', 'hidden').css('height', heightClonedElement);
-
-
+            $('.original').css('visibility', 'hidden').css('height', 76);
 
         } else {
             // make logo smaller
             $(".cloned .logo-container").removeClass('shrink');
             // not scrolled past the menu; only show the original menu.
             $('.cloned').hide();
-            $('.original').css('visibility', 'visible').css('height', heightOrgElement);
+            $('.original').css('visibility', 'visible').css('height', 160);
 
 
         }

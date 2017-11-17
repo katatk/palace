@@ -1,5 +1,15 @@
 .first-container {
     background-color: $light-bg;
+
+    .inner {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .primary-p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .welcome-to {
@@ -25,6 +35,8 @@
         left: -20%;
         z-index: -10;
     }
+
+
 }
 
 .main-heading {
@@ -40,9 +52,9 @@
         left: calc(50% - 118.164px);
         top: calc(50% - 158.797px);
         z-index: 2;
-        
+
         img {
-           box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15); 
+            box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
         }
 
         button {
@@ -50,10 +62,16 @@
             display: block;
         }
     }
+
+    .plans-img {
+        background: url('../assets/plans.jpg') no-repeat center;
+        background-size: cover;
+    }
 }
 
 .section {
-    padding: 8rem 0;
+    padding: 6rem 0;
+
 }
 
 .dream-home {
@@ -64,9 +82,14 @@
 
 .house-land-container {
     background: $green;
+
     position: relative;
     overflow: hidden;
     z-index: 2;
+
+    .pos-rel {
+        background: linear-gradient(47deg, #6ec03a 36%, $green 36%);
+    }
 
     &::before {
         content: ' ';
@@ -89,6 +112,11 @@
     position: relative;
     overflow: hidden;
     z-index: 2;
+
+    .pos-rel {
+        background: linear-gradient(47deg, $primary 64%, #00b4a5 64%);
+    }
+
     &::before {
         content: ' ';
         display: block;
@@ -114,31 +142,92 @@
     a {
         color: #fff;
         position: relative;
+        display: inline-block;
 
-        &:after {
+        &:hover {
+            color: #fff;
+        }
+
+        &::after {
             content: "";
             position: absolute;
+            top: 110%;
+            left: 0;
             border-bottom: 2px solid #fff;
+            width: 30%;
         }
     }
-    @media (min-width: 992px) {
-        background-image: none;
+
+    &::before {
+        @media (min-width: 992px) {
+            content: none;
+            background-image: none;
+        }
     }
 }
+
+
 
 // large devices
 @media (min-width: 992px) {
     .inner {
         max-width: 540px;
         padding: 0 15px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        padding-right: 5rem;
     }
+
+
     .design-build {
         background: url('../assets/design-build.jpg') no-repeat;
         background-size: cover;
+
     }
 
     .house-land {
         background: url('../assets/house-land-packages.jpg') no-repeat;
         background-size: cover;
+    }
+}
+
+.first-container a.underline {
+    position: relative;
+    display: inline-block;
+
+    &:hover {
+        color: $green;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 110%;
+        left: 0;
+        border-bottom: 2px solid $green;
+        width: 30%;
+    }
+}
+
+.ruler,
+.pencil {
+    display: none;
+    z-index: 2;
+    position: absolute;
+}
+
+/* x-large devices */
+
+@media (min-width: 1400px) {
+    .ruler {
+        display: inline-block;
+        right: 0;
+        bottom: 2rem;
+    }
+
+    .pencil {
+        display: inline-block;
+        right: -60px;
+        bottom: 40px;
     }
 }
