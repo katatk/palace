@@ -1,11 +1,17 @@
 // Styling for the navbar
-#mainNav {
+.mainNav {
     color: #000;
     background-color: transparent;
+    top: 0;
+    width: 100%;
+
+    @media (min-width: 992px) {
+       /* position: absolute;*/
+    }
 
     @media (min-width: 992px) {
         background-color: #fff;
-       @include dropshadow();
+        @include dropshadow();
     }
 
     .active .nav-link {
@@ -31,11 +37,18 @@
     }
 
     .logo-container {
-        position: relative;
-        top: -53px;
-        
+
         img {
-           height: 124px;
+            max-height: 62px;
+            transition: all 0.3s ease-in;
+        }
+
+        @media (min-width: 992px) {
+            position: relative;
+            top: -53px;
+            img {
+                max-height: 124px;
+            }
         }
     }
 
@@ -43,15 +56,20 @@
         position: static;
 
         img {
-            height: 50px;
+            max-height: 62px;
             width: auto;
+            transition: all 0.3s ease-in;
         }
     }
-    
+
     .contact-btn {
         margin-left: 0.5rem;
         padding: 0.5em 1.5em;
     }
 
 
+}
+
+.fixed-top {
+    
 }

@@ -14,38 +14,44 @@
 
 
 .top-bar {
-    position: absolute;
-    color: #fff;
-    @include montserrat-semi-bold;
-    padding: 1rem;
-    vertical-align: middle;
 
-    a {
+    display: none;
+
+    @media (min-width: 992px) {
+       display: block;
+        position: absolute;
+        top: 0;
         color: #fff;
-        @include darken-hover(#fff);
-    }
+        @include montserrat-semi-bold;
+        padding: 1rem;
+        vertical-align: middle;
 
-    .phone {
-        margin-top: 0.25rem;
-        margin-right: 2rem;
-    }
+        a {
+            color: #fff;
+            @include darken-hover(#fff);
+        }
 
-    .fa-phone {
-        margin-right: 0.5rem;
-    }
+        .phone {
+            margin-top: 0.25rem;
+            margin-right: 2rem;
+        }
 
-    .fa-stack {
-        margin-right: 0.5rem;
-        &:last-child {
-            margin-right: 0;
+        .fa-phone {
+            margin-right: 0.5rem;
+        }
+
+        .fa-stack {
+            margin-right: 0.5rem;
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }
 
 header.masthead {
     position: relative;
-    padding-top: 10rem;
-    padding-bottom: calc(10rem - 56px);
+    padding: 10rem 0;
     background-image: url('../assets/hero.jpg');
     background-position: center center;
     @include background-cover;

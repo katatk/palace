@@ -1,5 +1,11 @@
-.first-container {
+#first-container {
     background-color: $light-bg;
+    
+    padding-top: 6rem;
+    
+    @media (min-width: 992px) {
+    padding-top: calc(6rem + 150px);
+    }
 
     .inner {
         padding-top: 0;

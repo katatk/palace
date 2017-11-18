@@ -1,4 +1,8 @@
 .navbar-toggler {
+    
+    &:focus {
+        outline: none;
+    }
 
     .navbar-toggler-icon {
         width: 40px;
