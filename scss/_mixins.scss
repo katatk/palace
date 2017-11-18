@@ -1,15 +1,7 @@
 // Mixins
 @mixin transition-all() {
     -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
     transition: all 0.2s;
-}
-
-@mixin background-cover() {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
 
 @mixin montserrat-light() {
@@ -52,5 +44,6 @@
 }
 
 @mixin dropshadow() {
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.08);
 }

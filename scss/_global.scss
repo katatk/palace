@@ -54,13 +54,13 @@ h2 {
     /* pill style buttons */
     border-radius: 999px;
     color: #fff;
-    /*   background: -webkit-gradient(linear, left top, right top, from($primary), to($green));
-    background: linear-gradient(to right, $primary, $green);*/
     background-size: 100%;
     position: relative;
     /* fallback for browsers that don't support gradients */
     background-color: $primary;
+    background-image: -webkit-gradient(linear, left top, right top, from($primary), to($green));
     background-image: linear-gradient(to right, $primary, $green);
+    -webkit-transition: background 1s ease;
     transition: background 1s ease;
     cursor: pointer;
     text-transform: uppercase;
@@ -74,6 +74,7 @@ h2 {
         border-radius: inherit;
         /* fallback for browsers that don't support gradients */
         background-color: $primary;
+        background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
         background-image: linear-gradient(to left, $primary, $green);
         content: '';
         display: block;
@@ -84,6 +85,7 @@ h2 {
         opacity: 0;
         width: 100%;
         z-index: -100;
+        -webkit-transition: opacity 1s;
         transition: opacity 1s;
     }
 
@@ -98,6 +100,7 @@ h2 {
         {
         /* fallback for browsers that don't support gradients */
         background-color: $primary;
+        background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
         background-image: linear-gradient(to left, $primary, $green);
 
     }
@@ -105,6 +108,7 @@ h2 {
 
 .btn:not([disabled]):not(.disabled).active,
 .btn:not([disabled]):not(.disabled):active {
+    background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
     background-image: linear-gradient(to left, $primary, $green);
 }
 
