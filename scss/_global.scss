@@ -124,3 +124,7 @@ h2 {
     position: relative;
 }
 
+.dropshadow {
+    @include dropshadow();
+}
+
