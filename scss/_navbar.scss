@@ -13,7 +13,7 @@
 
     .active .nav-link {
         color: $primary;
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
             position: relative;
             top: 2px;
             border-bottom: 2px solid $primary;
@@ -26,7 +26,7 @@
         font-size: 0.8rem;
         @include roboto-medium;
         text-align: center;
-        @media(min-width: 2000px) {
+        @media (min-width: 2000px) {
             text-align: left;
         }
 
