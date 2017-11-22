@@ -8,12 +8,14 @@ footer {
   }
 
   .address {
-    margin-top: 36px;
+    margin-top: 1.5rem;
+    @media (min-width: 992px) {
+      margin-top: 3rem;
+    }
   }
 
   .social {
-    color: #fff;
-    @include darken-hover(#fff);
+    margin: 0 0.3rem;
   }
 
   .container-fluid:first-child {
@@ -31,13 +33,29 @@ footer {
 
   ul {
     padding-left: 0;
+    margin-bottom: 0;
   }
 
   li {
     list-style: none;
   }
 
+  p {
+    margin-bottom: 0;
+  }
+
   .terms-links a {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
+    @media (min-width: 992px) {
+      margin: 0 1rem;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }

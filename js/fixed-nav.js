@@ -1,6 +1,6 @@
 function stickyNav() {
 
-  var mn = $('.mainNav');
+  var mn = $('#mainNav');
   // bootstrap's fixed top class
   fixed = 'fixed-top';
   // get scroll height to call sticky function
@@ -8,6 +8,8 @@ function stickyNav() {
 
   // add fixed class on scroll at larger screen sizes
   if ($(window).outerWidth() >= 992) {
+    // change background color to white
+    mn.css('background-color', 'white');
     // if scrolled to the top of the menu (bottom of masthead)
     if ($(this).scrollTop() > mastheadHeight) {
       // if position is not fixed already, change position property
@@ -31,13 +33,22 @@ function stickyNav() {
 
   }
   // else add a fixed class for mobile
-  else {
+  else if ($(window).outerWidth() < 992) {
+    // make header white when scroll past masthead
+    if ($(this).scrollTop() > (mastheadHeight - 200)) {
+      console.log(mastheadHeight);
+      mn.css('background-color', 'white');
+    } else {
+      mn.css('background-color', 'transparent');
+    }
+
     if (mn.css('position') != 'fixed') {
       mn.css({
         'position': 'fixed',
         'top': 0
       }).addClass(fixed);
     }
+
   }
 }
 

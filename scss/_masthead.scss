@@ -1,120 +1,142 @@
 // Styling for the masthead
 @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
-
 .top-bar {
+  position: absolute;
+  color: #fff;
+  @include montserrat-semi-bold;
+  padding: 1rem;
+  vertical-align: middle;
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+  }
+  display: none;
+  @media (min-width: 992px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    color: #fff;
+    @include montserrat-semi-bold;
+    padding: 1rem;
+    vertical-align: middle;
 
-    display: none;
-
-    @media (min-width: 992px) {
-       display: block;
-        position: absolute;
-        top: 0;
-        color: #fff;
-        @include montserrat-semi-bold;
-        padding: 1rem;
-        vertical-align: middle;
-
-        a {
-            color: #fff;
-            @include darken-hover(#fff);
-        }
-
-        .phone {
-            margin-top: 0.25rem;
-            margin-right: 2rem;
-        }
-
-        .fa-phone {
-            margin-right: 0.5rem;
-        }
-
-        .fa-stack {
-            margin-right: 0.5rem;
-            &:last-child {
-                margin-right: 0;
-            }
-        }
+    a {
+      color: #fff;
+      @include darken-hover(#fff);
     }
+
+    .phone {
+      margin-right: 2rem;
+    }
+
+    .fa-phone {
+      margin-right: 0.5rem;
+    }
+
+    .fa-stack {
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 header.masthead {
-    position: relative;
-    padding: 10rem 0;
-    background-image: url('../assets/hero.jpg');
-    background-position: center center;
-    @include background-cover;
-    hr {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    h1 {
-        font-size: 2rem;
-    }
+  position: relative;
+  height: 100vh;
+  background-image: url("../assets/hero.jpg");
+  background-position: center center;
+  @include background-cover;
+  @media (min-width: 768px) {
+    height: calc(100vh -);
+  }
+
+  hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-weight: 300;
+  }
+  @media (min-width: 768px) {
     p {
-        font-weight: 300;
+      font-size: 1.15rem;
     }
+  }
+  @media (min-width: 992px) {
+    height: calc(100vh - 150px);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .tagline {
+    @include yesteryear;
+    display: block;
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    line-height: 1;
+  }
+
+  .btn {
+    border: 2px solid #fff;
+    background-color: transparent;
+    background: none;
+    background-image: none;
+    color: #fff;
+    font-size: 0.8rem;
     @media (min-width: 768px) {
-        p {
-            font-size: 1.15rem;
-        }
+      font-size: 1rem;
     }
+
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      background-image: none;
+    }
+  }
+
+  .down-arrow {
+    height: 30px;
+    position: absolute;
+    bottom: 2rem;
+    left: calc(50% - 15px);
+    animation: bounce 3s;
+    animation-iteration-count: 2;
+    @media (min-width: 768px) {}
     @media (min-width: 992px) {
-        height: calc(100vh - 150px);
-        min-height: 650px;
-        padding-top: 0;
-        padding-bottom: 0;
-        h1 {
-            font-size: 3rem;
-        }
+      height: 40px;
+      left: calc(50% - 20px);
+      bottom: 4rem;
     }
-    @media (min-width: 1200px) {
-        h1 {
-            font-size: 4rem;
-        }
-    }
-
-    .tagline {
-        @include yesteryear;
-        display: block;
-        margin: 2rem 0;
-        font-size: 2.2rem;
-    }
-
-    .btn {
-        border: 2px solid #fff;
-        background-color: transparent;
-        background: none;
-        background-image: none;
-        color: #fff;
-
-        &:active,
-        &:focus,
-        &:hover {
-            background-color: transparent;
-            background-image: none;
-        }
-
-    }
-
-    .down-arrow {
-        height: 40px;
-        position: absolute;
-        bottom: 4rem;
-        left: calc(50% - 20px);
-        animation: bounce 3s;
-        animation-iteration-count: 2;
-
-    }
+  }
 }

@@ -30,22 +30,19 @@
     <!-- Phone and social links -->
     <div class="container-fluid top-bar">
       <div class="container d-flex justify-content-end">
-        <a href="tel:078564156" class="phone"><i class="fa fa-phone"></i>07 856 4156</a>
-        <span class="fa-stack">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x"></i>
-            </span>
-        <span class="fa-stack">
-          <i class="fa fa-circle-thin fa-stack-2x"></i>
-          <i class="fa fa-linkedin fa-stack-1x"></i>
-            </span>
-        <span class="fa-stack">
-                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                <i class="fa fa-pinterest-p fa-stack-1x"></i>
-            </span>
+        <div class="d-flex align-items-center">
+          <a href="tel:078564156" class="phone"><i class="fa fa-phone"></i>07 856 4156</a>
+          <a class="social" href="">
+                                <i class="fa fa-facebook circle-icon"></i>
+                            </a>
+          <a class="social" href="">
+                                <i class="fa fa-linkedin circle-icon"></i>
+                            </a>
+          <a class="social" href="">
+                                <i class="fa fa-pinterest-p circle-icon"></i>
+                            </a>
+        </div>
       </div>
-
-    </div>
     </div>
     <div class="container my-auto">
       <div class="row">
@@ -64,7 +61,7 @@
   </header>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg mainNav" role="navigation">
+  <nav class="navbar navbar-expand-lg" id="mainNav" role="navigation">
     <div class="container">
       <div class="logo-container">
         <a class="navbar-brand" href="./">
@@ -80,27 +77,30 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="sections">Home</a>
+            <a class="nav-link" href="./">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sections">Sections</a>
+            <a class="nav-link" href="">Sections</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#services">Design &amp; Build</a>
+            <a class="nav-link" href="">Design &amp; Build</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#portfolio">House &amp; Land Packages</a>
+            <a class="nav-link" href="">House &amp; Land Packages</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Why Choose Us</a>
+            <a class="nav-link" href="">Why Choose Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Location</a>
+            <a class="nav-link" href="">Location</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Gallery</a>
+            <a class="nav-link" href="">Gallery</a>
           </li>
-          <li class="nav-item btn contact-btn">
+          <li class="nav-item d-lg-none">
+            <a class="nav-link" href="">Contact Us</a>
+          </li>
+          <li class="nav-item btn contact-btn d-none d-lg-inline-block">
             <a class="nav-link" href="#contact">Contact Us</a>
           </li>
         </ul>
@@ -110,7 +110,7 @@
   <main role="main">
     <!-- Welcome section -->
     <section>
-      <div class="container-fluid section" id="first-container">
+      <div class="container-fluid first-container section">
         <div class="container text-center">
           <span class="welcome-to"><span>Welcome to</span></span>
           <h1 class="main-heading">Palace Developments</h1>
@@ -129,11 +129,11 @@
               </div>
             </div>
             <div class="info-pack-container text-center">
-              <img src="assets/info-pack.jpg" alt="Free Information Pack">
-              <button class="btn">Free Information Pack</button>
+              <a href=""><img src="assets/info-pack.jpg" alt="Free Information Pack">
+                            <button class="btn">Free Information Pack</button>
+                            </a>
             </div>
             <div class="col-lg-6 p-0 plans-img">
-              <!-- <img src="assets/plans.jpg" alt="Plans for every style and budget" class="img-fluid">-->
             </div>
 
           </div>
@@ -187,9 +187,9 @@
         <div class="grid mt-5">
           <div class="grid-sizer"></div>
           <div class="gutter-sizer"></div>
-          <div class="grid-item" style="background-image: url(assets/gallery-1.jpg)"></div>
           <a href="#">
             <div class="hidden-overlay"></div>
+            <div class="grid-item" style="background-image: url(assets/gallery-1.jpg)"></div>
           </a>
           <a href="#">
             <div class="grid-item grid-item--height2" style="background-image: url(assets/gallery-2.jpg)"></div>
@@ -228,10 +228,10 @@
     <div class="container-fluid py-5">
       <div class="container">
         <div class="row">
-          <div class="col col-lg-3">
+          <div class="col-lg-3 text-center text-lg-left">
             <img src="assets/palace-logo-footer.png" alt="Palace Developments">
           </div>
-          <div class="col col-lg-3">
+          <div class="col-lg-3 text-center text-lg-left mt-5 m-lg-0">
             <h3 class="text-white">Contact Us</h3>
             <ul>
               <li>Phone: <a href="tel:078564156">07 856 4156</a></li>
@@ -239,29 +239,20 @@
               <li>Location: <a href="">Get Directions</a></li>
             </ul>
           </div>
-          <div class="col col-lg-3 address">
+          <div class="col-lg-3 text-center text-lg-left address">
             <p>22 Firth St, Hamilton East,<br> Hamilton 3216,<br> New Zealand</p>
           </div>
-          <div class="col col-lg-3">
-            <h3 class="text-white text-right">We're Social</h3>
-            <div class="social-container text-right text-white">
+          <div class="col-lg-3 mt-5 m-lg-0">
+            <h3 class="text-white text-center text-lg-right">We're Social</h3>
+            <div class="social-container text-center text-lg-right text-white">
               <a class="social" href="">
-                            <span class="fa-stack">
-                                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x"></i>
-                            </span>
+                                <i class="fa fa-facebook circle-icon"></i>
                             </a>
               <a class="social" href="">
-                            <span class="fa-stack">
-                                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                                <i class="fa fa-linkedin fa-stack-1x"></i>
-                            </span>
+                                <i class="fa fa-linkedin circle-icon"></i>
                             </a>
               <a class="social" href="">
-                            <span class="fa-stack">
-                                <i class="fa fa-circle-thin fa-stack-2x"></i>
-                                <i class="fa fa-pinterest-p fa-stack-1x"></i>
-                            </span>
+                                <i class="fa fa-pinterest-p circle-icon"></i>
                             </a>
             </div>
           </div>
@@ -275,12 +266,12 @@
           <div class="col-xs-12 col-md-4">
             <p class="m-0 text-center text-md-left">&copy; Copyright Palace Developments Ltd</p>
           </div>
-          <div class="col-xs-12 col-md-4 text-center">
-            <p class="m-0 my-3 my-md-0 terms-links">
+          <div class="col-xs-12 col-md-4">
+            <p class="m-0 my-3 my-md-0 terms-links text-center d-lg-flex justify-content-between">
               <a href="#">Privacy Policy</a> <a href="#">Terms of Service</a> <a href="#">Site Map</a></p>
           </div>
           <div class="col-xs-12 col-md-4">
-            <p class="m-0 text-center text-md-right"><a href="#">Web Design by Digital Stream</a></p>
+            <p class="m-0 text-center text-md-right"><a href="https://www.digitalstream.co.nz/" target="_blank">Web Design by Digital Stream</a></p>
           </div>
         </div>
       </div>
@@ -290,17 +281,13 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>-->
+  <script src="vendor/scrollreveal.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <!--     <script src="js/creative.min.js"></script>-->
-  <script src="js/fixed-nav.js"></script>
+  <script src="js/fixed-nav.min.js"></script>
   <script src="js/isotope.min.js"></script>
   <script src="js/gallery.min.js"></script>
+  <script src="js/scroll-reveal.min.js"></script>
 
 </body>
 

@@ -1,71 +1,68 @@
 // Styling for the navbar
-.mainNav {
-    color: #000;
-    background-color: transparent;
-    top: 0;
-    width: 100%;
 
+#mainNav {
+  color: #000;
+  background-color: transparent;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease-in-out;
+  @media (min-width: 992px) {
+    background-color: #fff;
+    @include dropshadow();
+  }
+
+  .active .nav-link {
+    color: $primary;
     @media (min-width: 992px) {
-        background-color: #fff;
-        @include dropshadow();
+      border-bottom: 2px solid $primary;
     }
+  }
 
-    .active .nav-link {
-        color: $primary;
-        border-bottom: 2px solid $primary;
+  .nav-link {
+    color: $text;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    @include roboto-medium;
+
+    &:hover {
+      color: $primary;
     }
+  }
 
-    .nav-link {
-        color: $text;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        @include roboto-medium;
+  .btn .nav-link {
+    color: #fff;
+    @include montserrat-light;
+    padding: 0;
+  }
 
-        &:hover {
-            color: $primary;
-        }
+  .logo-container {
+    img {
+      max-height: 62px;
+      transition: all 0.3s ease-in;
     }
+    @media (min-width: 992px) {
+      position: relative;
+      top: -53px;
 
-    .btn .nav-link {
-        color: #fff;
-        @include montserrat-light;
-        padding: 0;
+      img {
+        max-height: 124px;
+      }
     }
+  }
 
-    .logo-container {
+  .shrink {
+    position: static;
 
-        img {
-            max-height: 62px;
-            transition: all 0.3s ease-in;
-        }
-
-        @media (min-width: 992px) {
-            position: relative;
-            top: -53px;
-            img {
-                max-height: 124px;
-            }
-        }
+    img {
+      max-height: 62px;
+      width: auto;
+      transition: all 0.3s ease-in;
     }
+  }
 
-    .shrink {
-        position: static;
-
-        img {
-            max-height: 62px;
-            width: auto;
-            transition: all 0.3s ease-in;
-        }
-    }
-
-    .contact-btn {
-        margin-left: 0.5rem;
-        padding: 0.5em 1.5em;
-    }
-
-
-}
-
-.fixed-top {
-
+  .contact-btn {
+    margin-left: 0.5rem;
+    padding: 0.5em 1.5em;
+  }
 }
