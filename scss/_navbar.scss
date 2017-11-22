@@ -5,12 +5,14 @@
 
     @media (min-width: 992px) {
         background-color: #fff;
-       @include dropshadow();
+        @include dropshadow();
     }
 
     .active .nav-link {
         color: $primary;
-        border-bottom: 2px solid $primary;
+        @media (min-width: 992px) {
+            border-bottom: 2px solid $primary;
+        }
     }
 
     .nav-link {
@@ -33,9 +35,9 @@
     .logo-container {
         position: relative;
         top: -53px;
-        
+
         img {
-           height: 124px;
+            height: 124px;
         }
     }
 
@@ -47,7 +49,7 @@
             width: auto;
         }
     }
-    
+
     .contact-btn {
         margin-left: 0.5rem;
         padding: 0.5em 1.5em;
@@ -55,3 +57,11 @@
 
 
 }
+
+/* mobile nav */
+/*
+.collapse{
+    background-color: #fff;
+    z-index: 999;
+    padding: 0 5rem 5rem;
+}*/

@@ -8,7 +8,13 @@
 
     .primary-p {
         margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    @media (max-width: 575px) {
+        &.section {
+            padding-bottom: 0;
+        }
     }
 }
 
@@ -30,9 +36,9 @@
         content: "";
         position: absolute;
         border-top: 2px solid $primary;
-        width: 140%;
+        width: 130%;
         top: 50%;
-        left: -20%;
+        left: -15%;
         z-index: -10;
     }
 
@@ -48,24 +54,32 @@
     position: relative;
 
     .info-pack-container {
-        position: absolute;
-        left: calc(50% - 118.164px);
-        top: calc(50% - 158.797px);
-        z-index: 2;
+        background-color: #fff;
+        width: 100%;
+        margin: 0 auto;
+        @media (min-width: 992px) {
+            width: initial;
+            position: absolute;
+            left: calc(50% - 118.164px);
+            top: calc(50% - 158.797px);
+            z-index: 2;
+            background-color: transparent;
+        }
 
         img {
             box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
         }
 
         button {
-            margin-top: 1rem;
+            margin: 1rem auto 3rem;
             display: block;
         }
     }
 
     .plans-img {
-        background: url('../assets/plans.jpg') no-repeat center;
-        background-size: cover;
+        @media (min-width: 992px) {
+            background: url('../assets/plans.jpg') center / cover no-repeat;
+        }
     }
 }
 
@@ -75,7 +89,7 @@
 }
 
 .dream-home {
-    background: url('../assets/dream-home.jpg') no-repeat center;
+    background: url('../assets/dream-home.jpg') center / cover no-repeat;
     color: #fff;
 
 }
@@ -141,21 +155,7 @@
 
     a {
         color: #fff;
-        position: relative;
-        display: inline-block;
-
-        &:hover {
-            color: #fff;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 110%;
-            left: 0;
-            border-bottom: 2px solid #fff;
-            width: 30%;
-        }
+        @include half-underline(#fff);
     }
 
     &::before {
@@ -191,22 +191,8 @@
     }
 }
 
-.first-container a.underline {
-    position: relative;
-    display: inline-block;
-
-    &:hover {
-        color: $green;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        top: 110%;
-        left: 0;
-        border-bottom: 2px solid $green;
-        width: 30%;
-    }
+.first-container a {
+    @include half-underline($green);
 }
 
 .ruler,
