@@ -1,4 +1,9 @@
 // Mixins
+
+@mixin background-cover() {
+  background-size: cover; 
+}
+
 @mixin transition-all() {
     -webkit-transition: all 0.2s;
     transition: all 0.2s;

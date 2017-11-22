@@ -1,42 +1,43 @@
 footer {
-    
-    font-size: 0.9rem;
-    
-    background-color: $dark-bg; 
-    color: #fff;
-    
-    h3 {
-        font-size: 1.5rem;
-    }
-    
-    .address {
-        margin-top: 36px;
-    }
-    
-    .social {
-        color: #fff;
-        @include darken-hover(#fff);
-    }
+  font-size: 0.9rem;
+  background-color: $dark-bg;
+  color: #fff;
 
-    .container-fluid:first-child {
-        border-bottom: 1px solid #4b5b65;
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .address {
+    margin-top: 36px;
+  }
+
+  .social {
+    color: #fff;
+    @include darken-hover(#fff);
+  }
+
+  .container-fluid:first-child {
+    border-bottom: 1px solid #4b5b65;
+  }
+
+  .container-fluid:last-child {
+    font-size: 0.8125rem;
+
+    a {
+      color: #fff;
+      @include darken-hover(#fff);
     }
-    .container-fluid:last-child {
-     font-size: 0.8125rem;  
-        a {
-            color: #fff;
-            @include darken-hover(#fff);
-        }
-    }
-    
-    ul {
-        padding-left: 0; 
-    }
-    li {
-        list-style: none;
-    }
-    
-    .terms-links a {
-        margin: 0 1rem;
-    }
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  .terms-links a {
+    margin: 0 1rem;
+  }
 }

@@ -6,10 +6,6 @@
     width: 100%;
 
     @media (min-width: 992px) {
-       /* position: absolute;*/
-    }
-
-    @media (min-width: 992px) {
         background-color: #fff;
         @include dropshadow();
     }
@@ -71,5 +67,5 @@
 }
 
 .fixed-top {
-    
+
 }
