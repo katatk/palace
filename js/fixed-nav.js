@@ -13,25 +13,22 @@ function stickyNav() {
         // if scrolled to the top of the menu (bottom of masthead)
         if ($(this).scrollTop() > mastheadHeight) {
             // if position is not fixed already, change position property
-            if (mn.css('position') != 'fixed') {
-                mn.css({
-                    'position': 'fixed',
-                    'top': 0
-                }).addClass(fixed);
-                $('.logo-container').addClass('shrink');
-            }
-        } else {
-            // if position is not absolute already, change position property
-            if (mn.css('position') != 'absolute') {
-                mn.css({
-                    'position': 'absolute',
-                    'top': mastheadHeight
-                }).removeClass(fixed);
-                $('.logo-container').removeClass('shrink');
-            }
-        }
+            mn.css({
+                'position': 'fixed',
+                'top': 0
+            }).addClass(fixed);
+            $('.logo-container').addClass('shrink');
 
+        } else {
+            mn.css({
+                'position': 'absolute',
+                'top': mastheadHeight
+            }).removeClass(fixed);
+            $('.logo-container').removeClass('shrink');
+        }
     }
+
+
     // else add a fixed class for mobile
     else if ($(window).outerWidth() < 992) {
         // make header white when scroll past masthead
@@ -40,6 +37,7 @@ function stickyNav() {
             mn.addClass('dropshadow');
         } else {
             mn.css('background-color', 'transparent');
+            mn.removeClass('dropshadow');
         }
 
         if (mn.css('position') != 'fixed') {
@@ -51,6 +49,7 @@ function stickyNav() {
 
     }
 }
+
 
 $(document).ready(function () {
 
@@ -70,8 +69,7 @@ $(document).ready(function () {
     // mobile menu animate function
     $('.navbar-toggler-icon').click(function () {
         $(this).toggleClass('open');
-       $('#mainNav').toggleClass('white-bg');
-
+        $('#mainNav').toggleClass('white-bg');
     });
 
 });

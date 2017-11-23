@@ -78,7 +78,7 @@ header.masthead {
         }
     }
     @media (min-width: 992px) {
-        min-height: calc(100vh - 150px);
+        min-height: calc(100vh - 88px);
         padding-top: 0;
         padding-bottom: 0;
 
@@ -87,6 +87,7 @@ header.masthead {
         }
     }
     @media (min-width: 1200px) {
+        min-height: calc(100vh - 150px);
         h1 {
             font-size: 4rem;
         }
