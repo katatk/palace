@@ -12,12 +12,12 @@ window.sr = ScrollReveal();
 
 sr.reveal('.ruler', {
     origin: 'right',
-    distance: '100%',
-    viewFactor: 0.99,
+    distance: '200%',
+    viewFactor: 0.9
 });
 
 sr.reveal('.pencil', {
     origin: 'left',
-    distance: '100%',
+    distance: '200%',
     viewFactor: 1,
 });

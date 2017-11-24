@@ -1,12 +1,15 @@
 .navbar-toggler {
 
+    padding: 0.5rem;
+    cursor: pointer;
+
     &:focus {
         outline: none;
     }
 
-    .navbar-toggler-icon {   
-        width: 40px;
-        height: 30px;
+    .navbar-toggler-icon {
+        width: 26px;
+        height: 22px;
         position: relative;
         cursor: pointer;
         span {
@@ -29,13 +32,13 @@
             }
 
             &:nth-child(2) {
-                top: 15px;
+                top: 8px;
                 -webkit-transform-origin: left center;
                 transform-origin: left center;
             }
 
             &:nth-child(3) {
-                top: 30px;
+                top: 16px;
                 -webkit-transform-origin: left center;
                 transform-origin: left center;
             }
@@ -48,8 +51,8 @@
         &:nth-child(1) {
             -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
-            top: 1px;
-            left: 8px;
+            top: 0;
+            left: 0;
         }
         &:nth-child(2) {
             width: 0%;
@@ -58,13 +61,9 @@
         &:nth-child(3) {
             -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
-            top: 29px;
-            left: 8px;
+            top: 18px;
+            left: 0;
         }
-    }
-
-    @media (min-width: 576px) {
-        padding-right: 0;
     }
 
     @media (min-width: 992px) {

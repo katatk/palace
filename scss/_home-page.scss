@@ -7,7 +7,7 @@
             padding-top: calc(6rem + 88px);
         }
         @media (min-width: 1200px) {
-            padding-top: calc(6rem + 150px);
+            padding-top: calc(6rem + 100px);
         }
     }
 
@@ -71,7 +71,8 @@
         @media (min-width: 992px) {
             width: initial;
             position: absolute;
-            left: calc(50% - 118.164px);
+            left: 0;
+            right: 0;
             top: calc(50% - 158.797px);
             z-index: 2;
             background-color: transparent;
@@ -82,6 +83,7 @@
             box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.15);
             position: relative;
             top: 0;
+            -webkit-transition: top 0.2s ease-in-out;
             transition: top 0.2s ease-in-out;
 
             &:hover {

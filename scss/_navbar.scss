@@ -5,11 +5,20 @@
     top: 0;
     width: 100%;
     z-index: 999;
+    -webkit-transition: background-color 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     @media (min-width: 992px) {
+        height: 100px;
         background-color: #fff;
         @include dropshadow();
     }
+
+    @media (min-width: 1200px) {
+        height: 100px;
+    }
+
 
     .active .nav-link {
         color: $primary;
@@ -37,26 +46,37 @@
 
     .logo-container {
         img {
-            max-height: 62px;
+            max-height: 31px;
+            -webkit-transition: all 0.3s ease-in;
             transition: all 0.3s ease-in;
+            @media (min-width: 992px) {
+                max-height: 62px;
+            }
         }
         @media (min-width: 1200px) {
             position: relative;
-            top: -53px;
+            top: -31px;
 
             img {
                 max-height: 124px;
             }
         }
     }
+    @media (min-width: 992px) {
+        &.shrink {
+            max-height: 80px;
+            -webkit-transition: height 0.3s ease-in;
+            transition: height 0.3s ease-in;
+            .logo-container {
+                position: static;
+            }
 
-    .shrink {
-        position: static;
-
-        img {
-            max-height: 62px;
-            width: auto;
-            transition: all 0.3s ease-in;
+            img {
+                max-height: 62px;
+                width: auto;
+                -webkit-transition: all 0.3s ease-in;
+                transition: all 0.3s ease-in;
+            }
         }
     }
 
@@ -82,4 +102,8 @@
 // add extra padding between nav links on mobile
 .navbar-collapse .nav-link {
     padding: 1rem 1rem;
+}
+
+.navbar-brand {
+    padding: 0;
 }

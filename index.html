@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -26,7 +26,7 @@
 
 <body>
 
-    <header class="masthead text-center text-white d-flex" id="masthead">
+    <header class="masthead" id="masthead">
         <!-- Phone and social links -->
         <div class="container-fluid top-bar">
             <div class="container d-flex justify-content-end">
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="container my-auto">
-            <div class="row">
+            <div class="row my-auto">
                 <div class="col-lg-10 mx-auto">
                     <img src="assets/te-rahu.png" class="img-fluid" alt="Te Rahu Subvisions Te Awamutu">
                     <span class="tagline">Your dream home, right here!</span>
@@ -65,7 +65,11 @@
         <div class="container">
             <div class="logo-container">
                 <a class="navbar-brand" href="./">
-                <img src="assets/palace-logo.png" alt="Palace Developments"></a>
+                    <picture>
+                        <source media="(min-width: 992px)" srcset="assets/palace-logo.png">
+                        <img src="assets/palace-logo-mob.png" alt="Palace Developments">
+                    </picture>
+                </a>
             </div>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
@@ -304,15 +308,21 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <script src="vendor/scrollreveal.min.js" defer></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/fixed-nav.min.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/gallery.min.js"></script>
-    <script src="js/scroll-reveal.min.js"></script>
+    <script src="js/fixed-nav.min.js" defer></script>
+    <script src="js/isotope.min.js" defer></script>
+    <script src="js/gallery.min.js" defer></script>
+    <script src="js/scroll-reveal.min.js" defer></script>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement("picture");
+
+    </script>
+    <script src="vendor/picturefill.min.js" async></script>
 
 </body>
 

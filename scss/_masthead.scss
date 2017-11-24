@@ -5,10 +5,12 @@
     20%,
     50%,
     80% {
+        -webkit-transform: translateY(0);
         transform: translateY(0);
     }
 
     50% {
+        -webkit-transform: translateY(-15px);
         transform: translateY(-15px);
     }
 }
@@ -51,14 +53,16 @@
 
 header.masthead {
     position: relative;
+    height: 100vh;
     min-height: 100vh;
     background-image: url("../assets/hero.jpg");
     background-position: center center;
-    @include background-cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 
-    @media (min-width: 768px) {
-        min-height: 100vh;
-    }
+    @include background-cover;
 
     hr {
         margin-top: 30px;
@@ -78,6 +82,7 @@ header.masthead {
         }
     }
     @media (min-width: 992px) {
+        height: calc(100vh - 88px);
         min-height: calc(100vh - 88px);
         padding-top: 0;
         padding-bottom: 0;
@@ -87,7 +92,8 @@ header.masthead {
         }
     }
     @media (min-width: 1200px) {
-        min-height: calc(100vh - 150px);
+        height: calc(100vh - 100px);
+        min-height: calc(100vh - 100px);
         h1 {
             font-size: 4rem;
         }
@@ -129,7 +135,9 @@ header.masthead {
         position: absolute;
         bottom: 4rem;
         left: calc(50% - 15px);
+        -webkit-animation: bounce 3s;
         animation: bounce 3s;
+        -webkit-animation-iteration-count: 2;
         animation-iteration-count: 2;
         @media (min-width: 768px) {}
         @media (min-width: 992px) {

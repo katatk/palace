@@ -12,19 +12,18 @@ function stickyNav() {
         mn.css('background-color', 'white');
         // if scrolled to the top of the menu (bottom of masthead)
         if ($(this).scrollTop() > mastheadHeight) {
+        
             // if position is not fixed already, change position property
             mn.css({
                 'position': 'fixed',
                 'top': 0
-            }).addClass(fixed);
-            $('.logo-container').addClass('shrink');
+            }).addClass(fixed).addClass('shrink');
 
         } else {
             mn.css({
                 'position': 'absolute',
                 'top': mastheadHeight
-            }).removeClass(fixed);
-            $('.logo-container').removeClass('shrink');
+            }).removeClass(fixed).removeClass('shrink');
         }
     }
 

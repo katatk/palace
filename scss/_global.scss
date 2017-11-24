@@ -1,15 +1,18 @@
 // Global styling for this template
 html {
-    overflow-x: hidden;    
+    overflow-x: hidden;
 }
+
 
 body,
 html {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     @include roboto-light;
     color: $text;
-  
+    margin: 0;
+    padding: 0;
+
 }
 
 a {
@@ -36,7 +39,7 @@ h6 {
 }
 
 h2 {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
 }
 
 .bg-primary {
@@ -133,3 +136,13 @@ h2 {
     @include dropshadow();
 }
 
+/* fix for IE */
+/*.my-auto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}*/
