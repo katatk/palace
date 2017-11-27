@@ -10,7 +10,6 @@
 }
 
 footer {
-
     .social {
         margin: 0 0.2rem;
     }
@@ -31,7 +30,6 @@ footer {
 }
 
 header {
-
     .social {
         margin: 0 0.3rem;
     }
@@ -40,6 +38,10 @@ header {
         width: 35px;
         line-height: 35px !important;
         
-        @include darken-hover(#fff);
+        &:hover {
+            border: 2px solid darken(#fff, 15%);
+            color: darken(#fff, 15%);
+
+        }
     }
 }

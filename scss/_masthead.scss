@@ -129,6 +129,11 @@ header.masthead {
             background-image: none;
         }
     }
+    
+    // overwriting bootstrap's default
+    .btn:not([disabled]):not(.disabled):active {
+        background-image: none;
+    }
 
     .down-arrow {
         height: 30px;
@@ -141,9 +146,13 @@ header.masthead {
         animation-iteration-count: 2;
         @media (min-width: 768px) {}
         @media (min-width: 992px) {
-            height: 40px;
             left: calc(50% - 20px);
-            bottom: 4rem;
+            bottom: 2rem;
+        }
+        
+          @media (min-width: 1600px) {
+            height: 40px;
+            bottom: 2rem;
         }
     }
 }
