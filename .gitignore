@@ -1,3 +1,5 @@
 assets/
 *.zip
 .sass-cache/
+style.css
+style.css.map
