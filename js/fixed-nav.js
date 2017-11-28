@@ -49,7 +49,6 @@ function stickyNav() {
     }
 }
 
-
 $(document).ready(function () {
 
     // call when page loads
