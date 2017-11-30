@@ -43,6 +43,14 @@ h2 {
   font-size: 1.8rem;
 }
 
+h3 {
+    font-size: 1.1rem;
+}
+
+h3, h4, h5, h6 {
+    color: $primary;
+}
+
 .bg-primary {
   background-color: $primary;
 }
