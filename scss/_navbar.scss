@@ -1,5 +1,7 @@
 // Styling for the navbar
 #mainNav {
+    padding-left: 0;
+    padding-right: 0;
     color: #000;
     background-color: transparent;
     top: 0;
@@ -17,7 +19,7 @@
 
     @media (min-width: 1200px) {
         height: 100px;
-    }
+    } 
 
 
     .active .nav-link {
@@ -35,16 +37,21 @@
         font-size: 0.8rem;
         @include roboto-medium;
         text-align: center;
+        
+        @media (min-width: 992px) and (max-width: 1200px) {
+            font-size: 0.75rem;
+        }
         @media (min-width: 2000px) {
             text-align: left;
         }
-
+        
         &:hover {
             color: $primary;
         }
     }
 
     .logo-container {
+    
         img {
             max-height: 31px;
             -webkit-transition: all 0.3s ease-in;
@@ -63,6 +70,7 @@
         }
     }
     @media (min-width: 992px) {
+         margin-left: 0;
         &.shrink {
             max-height: 80px;
             -webkit-transition: height 0.3s ease-in;
@@ -106,4 +114,14 @@
 
 .navbar-brand {
     padding: 0;
+     margin-right: 0;
+}
+
+// adding padding in where bootstrap has removed it
+
+@media (max-width: 991px) {
+.navbar-expand-lg>.container, .navbar-expand-lg>.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 }

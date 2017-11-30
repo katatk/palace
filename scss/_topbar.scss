@@ -32,8 +32,10 @@
         }
     }
     
+    // on every page apart from homepage
     &.dark {
         background-color: $dark-bg;
         position: static;
+       padding: 0.5rem 0;
     }
 }
