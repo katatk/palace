@@ -24,7 +24,7 @@
     li {
         height: 16px;
         width: 16px;
-        margin-right: 32px;
+        margin-right: 35px;
         margin-left: auto;
         @media (min-width: 1200px) {
             height: 10px;
@@ -62,7 +62,9 @@
     left: 0;
     overflow: hidden;
 
-    &:active, &:hover, &:focus {
+    &:active,
+    &:hover,
+    &:focus {
         .carousel-control-next,
         .carousel-control-prev {
             opacity: 1;
@@ -173,3 +175,18 @@
 
 
 }
+
+    .welcome-to.palace {
+
+        &:before {
+            
+            width: 120%;
+            left: -10%;
+            
+            @media (max-width: 576px) {
+                width: 110%;
+                left: -5%;
+
+            }
+        }
+    }
