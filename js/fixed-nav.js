@@ -7,7 +7,7 @@ function stickyNav() {
     mastheadHeight = $('.masthead').height();
 
     // add fixed class on scroll at larger screen sizes
-    if ($(window).innerWidth() >= 992) {
+    if ($(window).outerWidth() >= 992) {
         // change background color to white
         mn.css('background-color', 'white');
         // if scrolled to the top of the menu (bottom of masthead)
@@ -29,7 +29,7 @@ function stickyNav() {
 
 
     // else add a fixed class for mobile
-    else if ($(window).innerWidth() < 992) {
+    else if ($(window).outerWidth() < 992) {
         // make header white when scroll past masthead
         if ($(this).scrollTop() > (mastheadHeight - 200)) {
             mn.css('background-color', 'white');
