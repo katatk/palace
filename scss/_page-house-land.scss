@@ -22,6 +22,7 @@
     right: auto;
 
     li {
+        @include dropshadow;
         height: 16px;
         width: 16px;
         margin-right: 35px;
@@ -80,12 +81,14 @@
     opacity: 0.5;
 }
 
+.property-card-container {
+    margin-bottom: 30px;
+}
+
 .property-card {
-
+    @include dropshadow;
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -134,8 +137,8 @@
             font-size: 0.6rem;
 
 
-            @media (min-width: 720px) and (max-width: 1200px) {
-                font-size: 0.6rem;
+            @media (min-width: 992px) {
+                font-size: 0.67rem; 
             }
         }
 
@@ -168,11 +171,8 @@
 }
 
 .btn.square {
-    margin-top: -1.5rem;
-    border-radius: 0;
+    border-radius: 0; 
     width: 100%;
-    margin-bottom: 30px;
-
 
 }
 

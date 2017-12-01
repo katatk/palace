@@ -17,13 +17,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Roboto:300,500|Yesteryear" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700|Roboto:300,500|Yesteryear" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/style.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Lightbox -->
+   <!-- <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.10/release/featherlight.min.css" type="text/css" rel="stylesheet" />-->
 
 </head>
 
@@ -106,13 +109,18 @@
             <div class="container-fluid first-container section">
                 <div class="container text-center">
                     <span class="welcome-to palace"><span>House &amp; Land Packages</span></span>
-                    <h1 class="main-heading">Lot 1, Street Name, Te Awamutu</h1>
-                    <a href="house-land-packages.html"><span>Back Arrow</span></a>
+                    <h1 class="main-heading position-relative smaller-h1">Lot 1, Street Name, Te Awamutu
+                        <a href="house-land-packages.html"><span class="sr-only">Back to house and land packages</span>
+                        <i class="fa fa-angle-left nav-arrow circle-icon"></i> </a>
+                    </h1>
+
+
+
                 </div>
 
 
-                <div class="container">
-                    <div class="row">
+                <div class="container mt-5">
+                    <div class="row no-gutters dropshadow">
                         <div class="col-12 col-lg-8">
                             <div id="carousel-1" class="carousel carousel-fade" data-ride="carousel" data-interval="false">
                                 <ol class="carousel-indicators">
@@ -153,53 +161,62 @@
                             <!-- close carousel -->
 
                         </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="property-card individual bg-white p-4">
+                        <div class="col-12 col-lg-4 bg-white d-flex flex-column">
+                            <div class="property-card individual">
                                 <div class="info">
                                     <h3>Lot 1, Street Name, Te Awamutu</h3>
                                     <p>Street 1 Name, Te Awamutu</p>
-                                    <p>Price: <span class="price">$799,000.00</span></p>
+                                    Price: <span class="price">$799,000.00</span>
                                 </div>
-                                <div class="row text-center icons-container">
-                                    <div class="col-12 icon-cards">
-                                        <img src="assets/icon-land-area.png" alt="Land area icon" class="icon">
-                                        <p>Land Area<br>
-                                            <span class="primary-color">810m<sup>2</sup></span></p>
+                                <div class="icons-container">
+                                    <div class="row no-gutters icon-cards">
+                                        <div class="col-12">
+                                            <img src="assets/icon-land-area.png" alt="Land area icon" class="icon">
+                                            <p>Land Area<br>
+                                                <span class="primary-color">810m<sup>2</sup></span></p>
+                                        </div>
                                     </div>
-                                    <div class="col-12 icon-cards">
-                                        <img src="assets/icon-bedrooms.png" alt="Bedrooms icon" class="icon">
-                                        <p>Bedrooms<br>
-                                            <span class="primary-color">4</span>
-                                        </p>
+                                    <div class="row no-gutters icon-cards">
+                                        <div class="col-12">
+                                            <img src="assets/icon-bedrooms.png" alt="Bedrooms icon" class="icon">
+                                            <p>Bedrooms<br>
+                                                <span class="primary-color">4</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="col-12 icon-cards">
-                                        <img src="assets/icon-bathrooms.png" alt="Bathrooms icon" class="icon">
-                                        <p>Bathrooms<br>
-                                            <span class="primary-color">2</span>
-                                        </p>
+                                    <div class="row no-gutters icon-cards">
+                                        <div class="col-12">
+                                            <img src="assets/icon-bathrooms.png" alt="Bathrooms icon" class="icon">
+                                            <p>Bathrooms<br>
+                                                <span class="primary-color">2</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div class="col-12 icon-cards">
-                                        <img src="assets/icon-garages.png" alt="Garages icon" class="icon">
-                                        <p>Garages<br>
-                                            <span class="primary-color">2 cars</span>
-                                        </p>
+                                    <div class="row no-gutters icon-cards">
+                                        <div class="col-12">
+                                            <img src="assets/icon-garages.png" alt="Garages icon" class="icon">
+                                            <p>Garages<br>
+                                                <span class="primary-color">2 cars</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <a class="btn square" href="#0">Contact Us</a>
-
+                            <a class="btn square d-none d-lg-block" href="#0">Contact Us</a>
                         </div>
+
+
                     </div>
 
-                    <div class="row">
-                        <div class="col-12 col-lg-8 bg-white individual-listing-description p-5">
-                            <h3>Description</h3>
+                    <div class="row no-gutters">
+                        <div class="col-12 col-lg-8 bg-white individual-listing-description px-4 py-5  dropshadow">
+                            <h4>Description</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
                             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-                            <h3>Property Features</h3>
-                            <table class="table">
+                            <h4>Property Features</h4>
+                            <table class="table mb-4">
                                 <tr>
                                     <th scope="row">Floor Area</th>
                                     <td>180m<sup>2</sup></td>
@@ -271,26 +288,34 @@
                                     <th scope="row">Extras</th>
                                     <td>Scullery, Grohe Tapware</td>
                                 </tr>
-                                <tr>
-                                    <th></th>
-                                    <td></td>
-                                </tr>
                             </table>
 
-                            <h3>Property Location</h3>
-                            <img src="assets/map.png" class="img-fluid">
-                            <a class="btn" href="#0">Free Information Pack</a>
+                            <h4>Property Location</h4>
+                            <div id="map"></div>
+                            <a class="btn mt-4" href="#0">Free Information Pack</a>
                         </div>
 
-                        <div class="col-12 col-lg-4 bg-dark p-5">
+                        <div class="col-12 col-lg-4 bg-dark px-4 py-5 fit-content  dropshadow">
                             <div class="row">
-                                <div class="col-12">
-                                    <h3>House Plan - 180m<sup>2</sup></h3>
-                                    <img src="assets/house-plan.png" alt="House Plan" class="img-fluid">
+                                <div class="col-12 mb-5">
+                                    <h4>House Plan - 180m<sup>2</sup></h4>
+                                    <div class="plan-container"><img src="assets/house-plan.png" id="house-plan" alt="House Plan" class="w-100">
+                                        
+                                        <a href="#0" data-featherlight="#house-plan">
+                                        <img src="assets/zoom.png" class="zoom">
+                                        </a>
+
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <h3>Subdivision Lots Map</h3>
-                                    <img src="assets/subdivision-lots-map.png" alt="Subdivision Lots Map" class="img-fluid">
+                                    <h4>Subdivision Lots Map</h4>
+                                    <div class="plan-container"><img src="assets/subdivision-lots-map.png" id="subdivision-lots" alt="Subdivision Lots Map" class="w-100">
+
+                                        <a href="#0" data-featherlight="#subdivision-lots">
+                                            <img src="assets/zoom.png" class="zoom">
+                                        </a>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -377,6 +402,13 @@
     <script src="js/gallery.min.js" defer></script>
     <script src="js/scroll-reveal.min.js" defer></script>
     <script src="js/carousel.min.js" defer></script>
+    <script defer src="js/map.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsqvymaRaA2dAKQecmt7FZpkH5EgZ7q_s&callback=initMap">
+
+
+    </script>
+    <!--<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.10/release/featherlight.min.js" type="text/javascript" charset="utf-8" defer></script>-->
+
     <script>
         // Picture element HTML5 shiv
         document.createElement("picture");

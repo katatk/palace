@@ -21,6 +21,13 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+@mixin montserrat-bold() {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 @mixin roboto-light() {
   font-family: 'Roboto', Arial, sans-serif;
   font-weight: 300;
