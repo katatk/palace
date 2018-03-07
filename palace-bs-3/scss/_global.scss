@@ -1,0 +1,150 @@
+// Global styling for this template
+
+html {
+  overflow-x: hidden;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  @include roboto-light;
+  color: $text;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: $green;
+  @include transition-all;
+  text-decoration: none;
+  @include darken-hover($green);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 1.5rem;
+  max-width: 100ch;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include montserrat-light;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.bg-primary {
+  background-color: $primary;
+}
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.btn {
+  /* pill style buttons */
+  border-radius: 999px;
+  color: #fff;
+  background-size: 100%;
+  position: relative;
+  /* fallback for browsers that don't support gradients */
+  background-color: $primary;
+  background-image: -webkit-gradient(linear, left top, right top, from($primary), to($green));
+  background-image: linear-gradient(to right, $primary, $green);
+  -webkit-transition: background 1s ease;
+  transition: background 1s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  @include montserrat-light;
+  padding: 0.75em 1.5em;
+  border: 0;
+  font-size: 0.9rem;
+  z-index: 100;
+  display: inline-block;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:before {
+    border-radius: inherit;
+    /* fallback for browsers that don't support gradients */
+    background-color: $primary;
+    background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
+    background-image: linear-gradient(to left, $primary, $green);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -100;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:active,
+  &:focus {
+    /* fallback for browsers that don't support gradients */
+    background-color: $primary;
+    background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
+    background-image: linear-gradient(to left, $primary, $green);
+  }
+}
+
+.btn:not([disabled]):not(.disabled).active,
+.btn:not([disabled]):not(.disabled):active {
+  background-image: -webkit-gradient(linear, right top, left top, from($primary), to($green));
+  background-image: linear-gradient(to left, $primary, $green);
+}
+
+.primary-color {
+  color: $primary;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.dropshadow {
+  @include dropshadow();
+}
+
+.dream-home {
+    background-image: url("../../assets/dream-home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
