@@ -1,5 +1,5 @@
-assets/
 *.zip
 .sass-cache/
+assets/
 style.css
 style.css.map

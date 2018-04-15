@@ -10,7 +10,7 @@
          center: palace
      });
 
-     var icon = 'assets/marker.png';
+     var icon = 'img/marker.png';
 
      var marker = new google.maps.Marker({
          position: palace,
